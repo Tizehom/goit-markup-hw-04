@@ -601,7 +601,8 @@ margin-bottom: 16px;
   transition: transform var(--transition-dur-and-func);
 }
 
-.project-item:hover .overlay {
+.project-link:hover .overlay,
+.project-link:focus .overlay {
   transform: translateY(0%);
 }
 
@@ -651,10 +652,9 @@ margin-bottom: 16px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scaleY(1);
-  transition: transform var(--transition-dur-and-func),
-  opacity var(--transition-dur-and-func),
+  transition: transform var(--transition-dur-and-func);
+  transition: opacity var(--transition-dur-and-func),
   visibility var(--transition-dur-and-func);
-
   width: 408px;
   min-height: 584px;
   border-radius: 4px;
@@ -687,9 +687,7 @@ margin-bottom: 16px;
   background-color: #e7e9fc;
   border-radius: 50%;
   border: none;
-  transition: background-color var(--transition-dur-and-func),
-  border var(--transition-dur-and-func),
-  fill var(--transition-dur-and-func);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
@@ -699,7 +697,7 @@ margin-bottom: 16px;
     fill: #ffffff;
     border: none;
 
-.close-btn-icon {
+.modal-close-btn {
   transition: fill var(--transition-dur-and-func);
 }
 
